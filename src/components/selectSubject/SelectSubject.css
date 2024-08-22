@@ -1,0 +1,45 @@
+.subject-selection {
+    text-align: center;
+
+    background: url('../../assets/certificate.jpg')no-repeat center/cover;
+    
+  }
+
+.subjects {
+  display: block;
+  justify-content: space-around;
+  width: 100%;
+  height: auto;
+}
+
+.subjects button {
+  width: 120px;
+  font-size: 16px;
+    margin-top: 50px;
+    cursor: pointer;
+  }
+  
+  .mathematics-design {
+    background: url('../../assets/deda.jpg') no-repeat center/cover;
+  }
+  
+  .physics-design {
+    background:url('../../assets/07f89a97ef076561466682d722e04e1d.jpg') no-repeat center/cover;
+  }
+  
+  .chemistry-design {
+    background:url('../../assets/svf.jpg')no-repeat center/cover ;
+  }
+  
+  .biology-design {
+    background:url('../../assets/de.jpg')no-repeat center/cover ;
+  }
+  
+  .english-design {
+    background: url('../../assets/err.jpg')no-repeat center/cover;
+  }
+  @media screen and (max-width:420px) {
+    .subject-selection {
+      height: 100vh;
+    }
+  }

@@ -1,0 +1,84 @@
+.box {
+    width: 800px;
+    height: 600px;
+    border-radius: 10px;
+    padding: 2px;
+    position: relative;
+    background: url('../../assets/we3.png');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #0a0000;
+    display: block;
+    margin: auto;
+}
+
+.box h1 {
+    font-size: 28px;
+    margin-top: 50px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+
+.bola {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.box h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.box p {
+    font-size: 16px;
+}
+
+.signature {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top: 1px solid #fff;
+    width: 300px;
+    text-align: center;
+}
+
+.qrcode {
+    position: absolute;
+    top: 310px;
+    right: 120px;
+}
+
+button {
+    background-color: DodgerBlue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    display: block;
+    margin: auto;
+
+}
+
+button:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: RoyalBlue;
+}
+
+@media screen and (max-width:420px) {
+  .box .default-design{
+    
+      width: 100%;
+  }
+   .bola{
+    padding: 20px;
+   }
+  }
