@@ -8,6 +8,7 @@ import Home from './components/home/Home';
 import AllSertifikat from './components/allsertifikat/AllSertifikat';
 import SertifikatPage from './components/sertifikatPage/SertificatPage';
 import SelectSubject from './components/selectSubject/SelectSubject';
+import Design from './components/sertifikatDesign/Design';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="SertifikatPage" element={<SertifikatPage />} />
         <Route path="SelectSubject" element={<SelectSubject setSelectedSubject={setSelectedSubject} />} />
         <Route path="AllSertifikat" element={<AllSertifikat selectedSubject={selectedSubject} />} />
+        <Route path="design" element={<Design />} />
       </Routes>
     </div>
   );

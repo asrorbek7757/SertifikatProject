@@ -1,45 +1,83 @@
-.subject-selection {
-    text-align: center;
+/* SelectSubject.css */
 
-    background: url('../../assets/certificate.jpg')no-repeat center/cover;
-    
+@keyframes slideDown {
+  0% {
+      transform: translateY(-100%);
+      opacity: 0;
   }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.subject-selection {
+  text-align: center;
+  padding: 40px 20px;
+  background: url('../../assets/certificate.jpg') no-repeat center/cover;
+  color: rgb(4, 4, 4);
+  animation: slideDown 0.8s ease-out; /* Animatsiya qo'shildi */
+}
 
 .subjects {
-  display: block;
-  justify-content: space-around;
-  width: 100%;
-  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+  animation: slideDown 1s ease-out; /* Animatsiya qo'shildi */
 }
 
 .subjects button {
-  width: 120px;
-  font-size: 16px;
-    margin-top: 50px;
-    cursor: pointer;
-  }
-  
-  .mathematics-design {
-    background: url('../../assets/deda.jpg') no-repeat center/cover;
-  }
-  
-  .physics-design {
-    background:url('../../assets/07f89a97ef076561466682d722e04e1d.jpg') no-repeat center/cover;
-  }
-  
-  .chemistry-design {
-    background:url('../../assets/svf.jpg')no-repeat center/cover ;
-  }
-  
-  .biology-design {
-    background:url('../../assets/de.jpg')no-repeat center/cover ;
-  }
-  
-  .english-design {
-    background: url('../../assets/err.jpg')no-repeat center/cover;
-  }
-  @media screen and (max-width:420px) {
-    .subject-selection {
+  width: 150px;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  animation: slideDown 1.2s ease-out; /* Animatsiya qo'shildi */
+}
+
+.subjects button:hover {
+  transform: scale(1.05);
+  background-color: rgba(5, 5, 5, 0.3);
+}
+
+.mathematics-design {
+  background: url('../../assets/deda.jpg') no-repeat center/cover;
+}
+
+.physics-design {
+  background: url('../../assets/2d.jpg') no-repeat center/cover;
+}
+
+.chemistry-design {
+  background: url('../../assets/svf.jpg') no-repeat center/cover;
+}
+
+.biology-design {
+  background: url('../../assets/de.jpg') no-repeat center/cover;
+}
+
+.english-design {
+  background: url('../../assets/err.jpg') no-repeat center/cover;
+}
+
+@media screen and (max-width: 420px) {
+  .subject-selection {
       height: 100vh;
-    }
+      padding: 20px 10px;
+      animation: slideDown 0.8s ease-out; /* Animatsiya qo'shildi */
   }
+
+  .subjects button {
+      width: 100%;
+      margin-top: 20px;
+      font-size: 16px;
+      animation: slideDown 1s ease-out; /* Animatsiya qo'shildi */
+  }
+}

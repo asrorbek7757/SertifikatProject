@@ -1,46 +1,64 @@
 /* Registration.css */
 
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: url('https://img.freepik.com/free-photo/flat-lay-desktop-concept-with-copy-space_23-2148226868.jpg') no-repeat center/cover; /* Orqa fon rangi */
+    background: url('https://img.freepik.com/free-photo/flat-lay-desktop-concept-with-copy-space_23-2148226868.jpg') no-repeat center/cover;
     padding: 20px;
-    
+    animation: slideDown 0.8s ease-out; /* Animatsiya qo'shildi */
 }
-.backdrop-ucun{
+
+.backdrop-ucun {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    background:url('../../assets/certificate.jpg') no-repeat center/cover;
+    background: url('../../assets/certificate.jpg') no-repeat center/cover;
     justify-content: center;
     align-items: center;
+    height: 100vh; /* Full screen height for backdrop */
+    overflow: hidden; /* Prevent overflow during animation */
 }
 
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
     color: #333;
+    animation: slideDown 1s ease-out; /* Animatsiya qo'shildi */
 }
 
 .basic {
     backdrop-filter: blur(3px);
     width: 100%;
-    max-width: 400px; /* Maksimal kenglik */
+    max-width: 400px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soyali effekt */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideDown 1.2s ease-out; /* Animatsiya qo'shildi */
 }
 
 .inp2 {
     display: flex;
     flex-direction: column;
+    animation: slideDown 1.4s ease-out; /* Animatsiya qo'shildi */
 }
 
 .inp {
-    margin-bottom: 16px; /* Inputlar orasidagi bo'shliq */
+    margin-bottom: 16px;
+    animation: slideDown 1.6s ease-out; /* Animatsiya qo'shildi */
 }
 
 .ant-input,
@@ -54,32 +72,36 @@ h1 {
 
 .ant-btn-primary {
     width: 100%;
-    background-color: #1890ff; /* Tugma rangi */
+    background-color: #1890ff;
     border-color: #1890ff;
     border-radius: 8px;
     padding: 10px 0;
     font-size: 16px;
+    animation: slideDown 1.8s ease-out; /* Animatsiya qo'shildi */
 }
 
 .ant-btn-primary:hover {
-    background-color: #40a9ff; /* Hover effekti */
+    background-color: #40a9ff;
     border-color: #40a9ff;
 }
 
 .ant-message-notice-content {
     font-size: 16px;
 }
+
 .linklar {
     text-align: center;
     margin-top: 20px;
+    animation: slideDown 2s ease-out; /* Animatsiya qo'shildi */
 }
 
 .linklar a {
-    color: #007BFF;
+    color: red;
     text-decoration: none;
     font-size: 16px;
 }
 
 .linklar a:hover {
     text-decoration: underline;
+    color: green;
 }

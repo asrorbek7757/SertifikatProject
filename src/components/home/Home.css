@@ -103,7 +103,7 @@
 
 /* Logo stil */
 .logo {
-  color: gold;
+  color: black;
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -136,16 +136,20 @@
   text-align: center;
   color: white;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 50%;
+  margin: auto;
 }
 
 .hero-title {
   font-size: 3em;
-  margin-bottom: 20px;
+  margin-top: 100px;
 }
 
 .hero-description {
   font-size: 1.5em;
-  margin-bottom: 30px;
+  margin-top: 100px;
+  color: #000;
+  width: 90%;
 }
 
 .hero-button {
@@ -174,7 +178,7 @@
 
 .services-title {
   font-size: 2em;
-  margin-bottom: 30px;
+  margin-top: 100px;
 }
 
 .services-list {
@@ -183,23 +187,36 @@
   flex-wrap: wrap;
 }
 
+.service-item a {
+  color: #ffffff;
+  border-radius: 10px;
+
+  transition: transform 0.3s ease;
+  text-decoration: none;
+}
 .service-item {
-  background-color: white;
-  padding: 20px;
+  background-color: dodgerblue;
+  width: 200px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   width: 30%;
-  margin: 10px;
   transition: transform 0.3s ease;
+  text-decoration: none;
+  margin-bottom: 70px;
+  height: 50px;
 }
 
-.service-item:hover {
-  transform: translateY(-10px);
+.service-item a:hover {
+  color: #ffffff;
+}
+.services-title:hover {
+  background: dodgerblue;
+  color: #ffffff;
 }
 
 /* Media query for screens 420px and smaller */
 @media screen and (max-width: 420px) {
-  .main {
+  .services {
     font-size: 1.5em;
     margin-bottom: 20px;
     height: 30vh;
@@ -212,26 +229,18 @@
 
   .service-item {
     width: 96%;
-    margin: 10px 0;
-    padding: 15px;
+    margin-top: 20px 0;
+   
+  }
+  .image{
+    height: 100vh;
+  }
+  .hero-button{
+    margin-top: 20px;
+    width: 90%;
   }
 }
-@media screen and (max-width: 700px) {
-  .main {
-    font-size: 2.5em;
-    margin-top: 40px;
-  }
 
-  .services-list {
-    align-items: center;
-  }
-
-  .service-item {
-    width: 30%;
-    margin: 10px 0;
-    padding: 15px;
-  }
-}
 
 
 /* Testimonials section */
@@ -271,3 +280,28 @@
 }
 
 /* Media query for screens 420px and smaller */
+.custom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.close-button {
+  margin-top: 20px;
+}

@@ -20,12 +20,12 @@ const CreateCertificate = ({ selectedSubject }) => {
   const fetchData = async () => {
     try {
       const response = await axios.get('http://localhost:5000/sertifikat/getSertificat');
-      const items = response.data.innerData.reverse();
+      const items = response.data.innerData.reverse(0);
 
       if (Array.isArray(items) && items.length) {
         // Ma'lumotlarni sanaga ko'ra tartiblaymiz va eng so'nggisini tanlaymiz
         const sortedItems = items.sort((a, b) => new Date(b.date) - new Date(a.date));
-        setData(sortedItems[5]); // Eng so'nggi sertifikatni saqlash
+        setData(sortedItems[0]); // Eng so'nggi sertifikatni saqlash
       } else {
         console.error('Fetched data is not an array or is empty:', items);
       }
@@ -94,15 +94,15 @@ const CreateCertificate = ({ selectedSubject }) => {
       <div className={`box ${getCertificateDesign()}`} ref={componentRef}>
         {data ? (
           <div className="bola">
-            <h1>C E R T I F I C A T E</h1>
+            <h1 className='logitiv'>CERTIFICATE</h1>
             <h3>{data.fname} {data.lname}</h3>
-            <h3>{data.markazNomi}da</h3>
+            <h3>{data.markazNomi} o'quv markazida</h3>
             <h3>{data.fanNomi} kursini</h3>
             <h3>muvaffaqiyatli tamomlagani uchun</h3>
             <h3>Ushbu sertifikat bilan taqdirlanadi</h3>
             <p>ID: {data.userId}</p>
             <h3>sana: {formatDate(data.date)}</h3>
-            <h3>_______________________</h3>
+            <h3>imzo:_______________________</h3>
             <QRCode value={`https://sertifikat-project.vercel.app//SertifikatPage`} size={70} className="qrcode" />
           </div>
         ) : (

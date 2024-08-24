@@ -1,14 +1,27 @@
 /* Sertifikat.css */
 
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 .padding {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    background:url('../../assets/certificate.jpg') no-repeat center/cover;
+    background: url('../../assets/certificate.jpg') no-repeat center/cover;
     justify-content: center;
     align-items: center;
-    
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Prevent overflow during animation */
+    animation: slideDown 0.8s ease-out; /* Animatsiya qo'shildi */
 }
 
 .container {
@@ -17,32 +30,33 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    background:url('../../assets/certificate.jpg') no-repeat center/cover;
+    background: url('../../assets/certificate.jpg') no-repeat center/cover;
     max-width: 600px;
     margin: 20px;
+    animation: slideDown 1s ease-out; /* Animatsiya qo'shildi */
 }
 
 h1 {
     text-align: center;
     color: #333;
     margin-bottom: 10px;
+    animation: slideDown 1.2s ease-out; /* Animatsiya qo'shildi */
 }
-
-
 
 .inp2 {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    animation: slideDown 1.4s ease-out; /* Animatsiya qo'shildi */
 }
 
 .inp {
     border: 1px solid #d9d9d9;
     border-radius: 4px;
- 
     width: 100%;
     font-size: 16px;
     transition: border-color 0.3s;
+    animation: slideDown 1.6s ease-out; /* Animatsiya qo'shildi */
 }
 
 .inp:focus {
@@ -57,6 +71,7 @@ h1 {
 
 .ant-picker {
     width: 100%;
+    animation: slideDown 1.8s ease-out; /* Animatsiya qo'shildi */
 }
 
 button[type="submit"] {
@@ -69,6 +84,7 @@ button[type="submit"] {
     cursor: pointer;
     border-radius: 4px;
     transition: background-color 0.3s;
+    animation: slideDown 2s ease-out; /* Animatsiya qo'shildi */
 }
 
 button[type="submit"]:hover {
