@@ -8,10 +8,6 @@
     flex-wrap: wrap;
     
 }
-.design-sertifikat:nth-child(4){
-    margin-left: 65px;
-
-}
 .design-sertifikat{
     width: 30%;
     height: 350px;
@@ -43,6 +39,10 @@ height: 100%;
     .tugma-design{
         width: 90%;
     }
+    .design-sertifikat:nth-child(4){
+        margin-left: 0px;
+    
+    }
 }
 @media screen and (max-width:420px) {
     .design{
@@ -57,5 +57,9 @@ height: 100%;
     .tugma-design{
         width: 80%;
         height: 40px;
+    }
+    .design-sertifikat:nth-child(4){
+        margin-left: 0px;
+    
     }
 }

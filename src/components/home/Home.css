@@ -19,111 +19,60 @@
   top: 0;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden; /* Barglar navbar tashqarisiga chiqmasligi uchun */
-}
-.leaf {
-  position: absolute;
-  top: -50px;
-  width: 50px;
-  height: 50px;
-  background-image: url('../../assets/leaves.png'); /* Barg ikonkasi */
-  background-size: contain;
-  background-repeat: no-repeat;
-  opacity: 0.8;
-  animation: fall 10s infinite linear, sway 5s infinite ease-in-out;
+  overflow: hidden; /* Prevents navbar from overflowing */
 }
 
-.leaf:nth-child(1) { left: 10%; animation-delay: 0s, 0s; }
-.leaf:nth-child(2) { left: 20%; animation-delay: 2s, 1s; }
-.leaf:nth-child(3) { left: 30%; animation-delay: 4s, 2s; }
-.leaf:nth-child(4) { left: 40%; animation-delay: 1s, 3s; }
-.leaf:nth-child(5) { left: 50%; animation-delay: 3s, 4s; }
-.leaf:nth-child(6) { left: 60%; animation-delay: 5s, 5s; }
-.leaf:nth-child(7) { left: 70%; animation-delay: 2s, 2s; }
-.leaf:nth-child(8) { left: 80%; animation-delay: 4s, 3s; }
-.leaf:nth-child(9) { left: 90%; animation-delay: 1s, 1s; }
-.leaf:nth-child(10) { left: 100%; animation-delay: 1s, 1s; }
-.leaf:nth-child(11) { left: 110%; animation-delay: 1s, 1s; }
-.leaf:nth-child(12) { left: 120%; animation-delay: 1s, 1s; }
-.leaf:nth-child(13) { left: 130%; animation-delay: 1s, 1s; }
-.leaf:nth-child(14) { left: 140%; animation-delay: 1s, 1s; }
-
-
-/* Kuzgi barglar uchun animatsiya */
+/* Falling leaves animation */
 .falling-leaves {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  pointer-events: none; /* Barglar bosilganda ta'sir qilmaydi */
+  pointer-events: none; /* Leaves are not interactive */
   overflow: hidden;
 }
 
-.falling-leaves::before,
-.falling-leaves::after {
-  content: '';
+.leaf {
   position: absolute;
   top: -50px;
   width: 50px;
   height: 50px;
-  background-image: url('../../assets/leaves.png'); /* Barg ikonkasi */
+  background-image: url('../../assets/leaves.png'); /* Leaf icon */
   background-size: contain;
+  background-repeat: no-repeat;
   opacity: 0.8;
   animation: fall 10s infinite linear, sway 5s infinite ease-in-out;
 }
 
-.falling-leaves::before {
-  left: 20%;
-  animation-delay: 0s, 0s;
-}
+/* Different leaves with varying delays */
+.leaf:nth-child(1) { left: 10%; animation-delay: 0s, 0s; }
+.leaf:nth-child(2) { left: 20%; animation-delay: 2s, 1s; }
+/* Add more leaves as needed */
 
-.falling-leaves::after {
-  left: 80%;
-  animation-delay: 5s, 2s;
-}
-
+/* Keyframes for falling and swaying animations */
 @keyframes fall {
-  0% {
-    top: -50px;
-  }
-  100% {
-    top: 100%;
-  }
+  0% { top: -50px; }
+  100% { top: 100%; }
 }
 
 @keyframes sway {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(15deg);
-  }
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(15deg); }
 }
 
-/* Logo stil */
+/* Logo style */
 .logo {
   color: black;
   font-size: 1.5em;
   font-weight: bold;
 }
 
-/* Foydalanuvchi ikonasi */
+/* User icon style */
 .user-icon {
   color: #000;
   font-size: 1.5em;
   cursor: pointer;
-}
-
-/* Sahifa pastga siljiganda navbarni kichikroq qilish */
-.navbar.scrolled {
-  padding: 10px;
-  background-color: rgba(255, 255, 255, 0.9); /* Background color biroz o‘zgaradi */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Soyani chuqurlashtirish */
-}
-
-.navbar.scrolled .user-icon {
-  font-size: 1.2em;
 }
 
 /* Hero section */
@@ -142,7 +91,7 @@
 
 .hero-title {
   font-size: 3em;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .hero-description {
@@ -167,13 +116,12 @@
 }
 
 /* Services section */
-/* Hizmatlarimiz bo‘limi uchun umumiy stil */
 .services {
   padding: 50px 20px;
   text-align: center;
   background-color: #f5f5f5;
-  height: 70vh; /* Bo‘limning balandligini belgilash */
-  overflow-y: auto; /* Vertikal scroll qo‘shish */
+  height: 70vh;
+  overflow-y: auto; /* Adds vertical scroll */
 }
 
 .services-title {
@@ -187,61 +135,27 @@
   flex-wrap: wrap;
 }
 
-.service-item a {
-  color: #ffffff;
-  border-radius: 10px;
-
-  transition: transform 0.3s ease;
-  text-decoration: none;
-}
 .service-item {
   background-color: dodgerblue;
-  width: 200px;
+  width: 50%;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 30%;
-  transition: transform 0.3s ease;
-  text-decoration: none;
   margin-bottom: 70px;
-  height: 50px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
-.service-item a:hover {
+.service-item a {
   color: #ffffff;
-}
-.services-title:hover {
-  background: dodgerblue;
-  color: #ffffff;
+  text-decoration: none;
 }
 
-/* Media query for screens 420px and smaller */
-@media screen and (max-width: 420px) {
-  .services {
-    font-size: 1.5em;
-    margin-bottom: 20px;
-    height: 30vh;
-  }
-
-  .services-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-item {
-    width: 96%;
-    margin-top: 20px 0;
-   
-  }
-  .image{
-    height: 100vh;
-  }
-  .hero-button{
-    margin-top: 20px;
-    width: 90%;
-  }
+.service-item:hover {
+  transform: translateY(-5px);
 }
-
-
 
 /* Testimonials section */
 .testimonials {
@@ -279,7 +193,6 @@
   background-color: #0056b3;
 }
 
-/* Media query for screens 420px and smaller */
 .custom-modal {
   position: fixed;
   top: 0;
@@ -305,3 +218,156 @@
 .close-button {
   margin-top: 20px;
 }
+
+/* Media query for screens 700px and smaller */
+@media screen and (max-width: 700px) {
+  .navbar {
+    padding: 15px;
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .logo {
+    font-size: 1.3em;
+  }
+
+  .user-icon {
+    font-size: 1.3em;
+  }
+
+  .hero {
+    height: auto;
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 2.5em;
+  }
+
+  .hero-description {
+    font-size: 1.2em;
+    margin-top: 50px;
+  }
+
+  .hero-button {
+    width: 80%;
+    padding: 15px;
+    font-size: 1.1em;
+    margin-top: 30px;
+  }
+
+  .services {
+    padding: 40px 15px;
+    font-size: 1.1em;
+  }
+
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    width: 85%;
+    margin-bottom: 30px;
+  }
+
+  .testimonials {
+    padding: 40px 15px;
+    font-size: 1.1em;
+  }
+
+  .testimonial-item {
+    font-size: 1em;
+    padding: 20px;
+  }
+
+  /* Modal styles for 700px and smaller */
+  .custom-modal .modal-content {
+    padding: 20px;
+    max-width: 85%;
+  }
+
+  .close-button {
+    margin-top: 15px;
+  }
+
+  .leaf {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Media query for screens 420px and smaller */
+@media screen and (max-width: 420px) {
+  .navbar {
+    padding: 10px;
+    font-size: 0.9em;
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+
+  .logo {
+    font-size: 1.2em;
+  }
+
+  .user-icon {
+    font-size: 1.2em;
+  }
+
+  .hero {
+    height: auto;
+    width: 90%;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2em;
+  }
+
+  .hero-description {
+    font-size: 1em;
+    margin-top: 40px;
+  }
+
+  .hero-button {
+    width: 90%;
+    padding: 10px;
+    font-size: 1em;
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+  }
+
+  .services {
+    padding: 30px 10px;
+    font-size: 1em;
+  }
+
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .testimonials {
+    padding: 30px 10px;
+    font-size: 1em;
+  }
+
+  .testimonial-item {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+}
+
+  

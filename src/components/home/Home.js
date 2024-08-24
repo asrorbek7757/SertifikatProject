@@ -64,8 +64,10 @@ function Home() {
         <p className="hero-description">Assalomu aleykum. SERTIFIKAT yaratish loyihasiga hush kelibsiz.!
           bu loyiha sizga tez va oson Sertifikat yaratish imkoniyatini beradi
         </p>
-        <Button className="hero-button" onClick={showModal}>Boshla</Button>
-        <div className="service-item"><br /><a href="/design">Sertifikat dizaylarini korish</a></div>
+  
+
+        <Button className="hero-button" onClick={showModal}>Boshlash</Button>
+        <div className="service-item"><a href="/design">Sertifikat dizaylarini korish</a></div>
       </div>
 
       <div className="services">
