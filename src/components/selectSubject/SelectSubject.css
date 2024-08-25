@@ -12,6 +12,7 @@
 }
 
 .subject-selection {
+  width: 100%;
   text-align: center;
   padding: 40px 20px;
   background: url('../../assets/certificate.jpg') no-repeat center/cover;
@@ -51,7 +52,7 @@
   background: url('../../assets/hjk.jpg') no-repeat center/cover;
 }
 
-.physics-design {
+.it-design {
   background: url('../../assets/2d.jpg') no-repeat center/cover;
 }
 
@@ -66,18 +67,15 @@
 .english-design {
   background: url('../../assets/err.jpg') no-repeat center/cover;
 }
-
+@media screen and (max-width: 520px) {
+.chemistry-design{
+width: 100%;
+}
+  
+}
 @media screen and (max-width: 420px) {
-  .subject-selection {
-      height: 100vh;
-      padding: 20px 10px;
-      animation: slideDown 0.8s ease-out; /* Animatsiya qo'shildi */
-  }
-
-  .subjects button {
-      width: 100%;
-      margin-top: 20px;
-      font-size: 16px;
-      animation: slideDown 1s ease-out; /* Animatsiya qo'shildi */
-  }
+.chemistry-design{
+height: 400px;
+}
+  
 }

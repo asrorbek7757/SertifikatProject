@@ -1,16 +1,19 @@
 .box {
-  width: 800px;
-  height: 600px;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
-  padding: 2px;
+  padding: 5px;
   position: relative;
-  background: url('../../assets/we3.png');
-  background-size: cover;
-  background-position: center;
+  background: url('../../assets/we3.png') no-repeat center center; /* Rasmni markazlashtirish */
+  background-size: contain; /* Rasmni kesmasdan saqlash */
   text-align: center;
   color: #0a0000;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: auto;
+  object-fit: cover;
 }
 
 .box h1 {
@@ -46,8 +49,8 @@
 
 .qrcode {
   position: absolute;
-  top: 310px;
-  right: 120px;
+  top:310px;
+  right: 400px;
 }
 
 button {
@@ -72,13 +75,50 @@ button:hover:not(:disabled) {
   background-color: RoyalBlue;
 }
 
-@media screen and (max-width: 900px) {
+/* 720px va kichik ekranlar uchun */
+@media screen and (max-width: 720px) {
   .box {
-      width: 90%;
+    height: 400px; /* Balandlikni kichraytirish */
+  }
+
+  .box h1,
+  .box h3,
+  .box p {
+    font-size: 16px;
+  }
+
+  .qrcode {
+    top: 200px;
+    right: 60px;
+    width: 40px;
+    height: 40px;
+  }
+  .bola {
+    margin-top: 2px;
+    padding: 10px;
   }
 }
 
+/* 420px va kichik ekranlar uchun */
+@media screen and (max-width: 420px) {
+  .box {
+    height: 400px; /* Balandlikni saqlash */
+  }
 
+  .box h1,
+  .box h3,
+  .box p {
+    font-size: 12px;
+  }
+
+  .qrcode {
+    top: 230px;
+    right: 40px;
+    width: 15px;
+    height: 30px;
+    font-size: 14px;
+  }
+}
 
 .logotiv {
   letter-spacing: 10px;

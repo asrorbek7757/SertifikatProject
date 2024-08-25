@@ -2,10 +2,11 @@
 .image {
   background: url('https://memberclicks.com/wp-content/uploads/2021/12/membership-certificate-1-scaled.jpg') no-repeat center/cover;
   width: 100%;
-  height: 100vh;
-  overflow: hidden; /* Prevent scrollbars */
-  position: relative;
+  min-height: 100vh;
+
+  background-attachment: fixed; /* This keeps the background fixed when scrolling */
 }
+
 
 /* Navbar styles */
 .navbar {
@@ -48,6 +49,25 @@
 /* Different leaves with varying delays */
 .leaf:nth-child(1) { left: 10%; animation-delay: 0s, 0s; }
 .leaf:nth-child(2) { left: 20%; animation-delay: 2s, 1s; }
+.leaf:nth-child(3) { left: 30%; animation-delay: 3s, 2s; }
+.leaf:nth-child(4) { left: 40%; animation-delay: ss, 1s; }
+.leaf:nth-child(5) { left: 50%; animation-delay: 2s, 1s; }
+.leaf:nth-child(6) { left: 60%; animation-delay: 2s, 1s; }
+.leaf:nth-child(7) { left: 70%; animation-delay: 3s, 1s; }
+.leaf:nth-child(8) { left: 80%; animation-delay: 2s, 1s; }
+.leaf:nth-child(9) { left: 90%; animation-delay: 2s, 1s; }
+.leaf:nth-child(10) { left: 100%; animation-delay: 1s, 4s; }
+.leaf:nth-child(11) { left: 110%; animation-delay: 2s, 1s; }
+.leaf:nth-child(12) { left: 20%; animation-delay: 1s, 1s; }
+.leaf:nth-child(13) { left: 130%; animation-delay: 5s, 1s; }
+.leaf:nth-child(14) { left: 140%; animation-delay: 2s, 1s; }
+.leaf:nth-child(15) { left: 150%; animation-delay: 3s, 1s; }
+.leaf:nth-child(16) { left: 160%; animation-delay: 2s, 1s; }
+.leaf:nth-child(17) { left: 170%; animation-delay: 1s, 1s; }
+.leaf:nth-child(87) { left: 180%; animation-delay: 2s, 1s; }
+.leaf:nth-child(19) { left: 190%; animation-delay: 2s, 1s; }
+.leaf:nth-child(20) { left: 200%; animation-delay: 1s, 1s; }
+.leaf:nth-child(21) { left: 210%; animation-delay: 2s, 1s; }
 /* Add more leaves as needed */
 
 /* Keyframes for falling and swaying animations */
@@ -59,6 +79,10 @@
 @keyframes sway {
   0%, 100% { transform: rotate(0deg); }
   50% { transform: rotate(15deg); }
+}
+.user-menu{
+display: flex;
+gap: 2px;
 }
 
 /* Logo style */
@@ -116,24 +140,7 @@
 }
 
 /* Services section */
-.services {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #f5f5f5;
-  height: 70vh;
-  overflow-y: auto; /* Adds vertical scroll */
-}
 
-.services-title {
-  font-size: 2em;
-  margin-top: 100px;
-}
-
-.services-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
 
 .service-item {
   background-color: dodgerblue;
@@ -157,26 +164,7 @@
   transform: translateY(-5px);
 }
 
-/* Testimonials section */
-.testimonials {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #ffffff;
-}
 
-.testimonials-title {
-  font-size: 2em;
-  margin-bottom: 30px;
-}
-
-.testimonial-item {
-  font-style: italic;
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  margin-bottom: 20px;
-}
 
 /* Modal styles */
 .ant-modal-title {

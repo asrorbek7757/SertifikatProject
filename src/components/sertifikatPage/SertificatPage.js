@@ -13,7 +13,7 @@ const Print = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get('https://backend-2-tau.vercel.app/sertifikat/getSertificat');
+            const response = await axios.get('http://localhost:5000/sertifikat/getSertificat');
             const items = response.data.innerData;
 
             console.log(response.data.innerData);

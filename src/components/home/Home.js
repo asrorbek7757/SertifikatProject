@@ -50,6 +50,24 @@ function Home() {
           <div className="leaf"></div>
           <div className="leaf"></div>
           <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
+          <div className="leaf"></div>
           {/* Qo'shimcha barglar */}
         </div>
         <ul className="nav-links">
@@ -75,12 +93,12 @@ function Home() {
           {/* Qo'shimcha xizmatlar */}
         </div>
       </div>
-
+{/* 
       <div className="testimonials">
         <h2 className="testimonials-title">Foydalanuvchi sharhlari</h2>
         <div className="testimonial-item">"Bu sayt juda ajoyib! Sertifikatlarni osongina yaratdim."</div>
         <div className="testimonial-item">"Foydalanish oson va samarali!"</div>
-      </div>
+      </div> */}
 
       {isModalVisible && (
         <div className="custom-modal">
