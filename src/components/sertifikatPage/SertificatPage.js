@@ -2,6 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import axios from '../../api/index';
 import QRCode from 'qrcode.react';
 import './SertificatPage.css';
+import selectedSubject from '../selectSubject/SelectSubject'
 
 const Print = () => {
     const componentRef = useRef(null);
@@ -28,6 +29,22 @@ const Print = () => {
             console.error('Error fetching data:', error);
         }
     };
+    const getCertificateDesign = () => {
+        switch (selectedSubject) {
+          case 'Matematika':
+            return 'mathematics-design'; // Matematika uchun dizayn
+          case 'IT':
+            return 'physics-design'; // Fizika uchun dizayn
+          case 'Kimyo':
+            return 'chemistry-design'; // Kimyo uchun dizayn
+          case 'Biologiya':
+            return 'biology-design'; // Biologiya uchun dizayn
+          case 'Ingliz tili':
+            return 'english-design'; // Ingliz tili uchun dizayn
+          default:
+            return 'default-design';
+        }
+      };
 
     const formatDate = (dateString) => {
         const options = { year: 'numeric', month: 'long', day: 'numeric' };
@@ -36,7 +53,7 @@ const Print = () => {
 
     return (
         <div>
-            <div className='box' ref={componentRef}>
+            <div className={`box ${getCertificateDesign()}`} ref={componentRef}>
                 {data && (
                     <div className="bola">
                         <h1>C E R T I F I C A T E</h1>
