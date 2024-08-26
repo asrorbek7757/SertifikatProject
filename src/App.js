@@ -9,6 +9,8 @@ import AllSertifikat from './components/allsertifikat/AllSertifikat';
 import SertifikatPage from './components/sertifikatPage/SertificatPage';
 import SelectSubject from './components/selectSubject/SelectSubject';
 import Design from './components/sertifikatDesign/Design';
+import History from './components/history/History';
+import LanguageSwitcher from './components/LanguageSwitcher/LanguageSwitcher';
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path="SelectSubject" element={<SelectSubject setSelectedSubject={setSelectedSubject} />} />
         <Route path="AllSertifikat" element={<AllSertifikat selectedSubject={selectedSubject} />} />
         <Route path="design" element={<Design />} />
+        <Route path="history" element={<History />} />
+        <Route path="language" element={<LanguageSwitcher />} />
       </Routes>
     </div>
   );

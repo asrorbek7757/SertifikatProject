@@ -43,16 +43,17 @@ const SignUp = () => {
         }
     };
     
+    
     return (
         <div className="padding">
 
-        <div className="container">
-            <h1>Certificate yaratish</h1>
+  
             <Form
                 className="basic"
                 onFinish={onFinish}
                 onFinishFailed={(errorInfo) => console.log('Xato:', errorInfo)}
-            >
+                >
+                <h1>Certificate yaratish</h1>
                 <div className="inp2">
                     <Form.Item
                         name="fname"
@@ -102,8 +103,8 @@ const SignUp = () => {
                         Yuborish
                     </Button>
                 </Form.Item>
+                <a href="/" className="linklar">Orqaga qaytish</a>
             </Form>
-        </div>
         </div>
     );
 };

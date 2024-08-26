@@ -22,7 +22,6 @@ const CreateCertificate = ({ selectedSubject }) => {
       const response = await axios.get('http://localhost:5000/sertifikat/getSertificat');
       const items = response.data.innerData.reverse();
       setData(items[0]);
-        
     } catch (error) {
       console.error('Error fetching data:', error);
       setIsError(true);
@@ -70,7 +69,7 @@ const CreateCertificate = ({ selectedSubject }) => {
     switch (selectedSubject) {
       case 'Matematika':
         return 'mathematics-design'; // Matematika uchun dizayn
-      case 'IT':
+      case 'Fizika':
         return 'physics-design'; // Fizika uchun dizayn
       case 'Kimyo':
         return 'chemistry-design'; // Kimyo uchun dizayn
@@ -85,6 +84,14 @@ const CreateCertificate = ({ selectedSubject }) => {
 
   return (
     <div className='bigdad'>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <div className={`box ${getCertificateDesign()}`} ref={componentRef}>
         {data ? (
           <div className="bola">
@@ -96,8 +103,9 @@ const CreateCertificate = ({ selectedSubject }) => {
             <h3>Ushbu sertifikat bilan taqdirlanadi</h3>
             <p>ID: {data.userId}</p>
             <h3>sana: {formatDate(data.date)}</h3>
-            <h3 className='imzo'>imzo:_______________________</h3>
-            <QRCode value={`https://sertifikat-project.vercel.app/SertifikatPage`} size={70} className="qrcode" />
+            <p className='shuncakiImzo'>imzo:_______________________</p>
+
+            <QRCode value={`https://sertifikat-project.vercel.app/sertifikat/${data.userId}`} size={50} className="qrcode" />
           </div>
         ) : (
           <p style={{color:"black"}}>Ma'lumotlar yuklanmoqda...</p>
@@ -110,11 +118,9 @@ const CreateCertificate = ({ selectedSubject }) => {
         onAfterPrint={handlePrint}
       />
       <br />
-      <button className="btn">Yaratilgan sertifikatlarni korish</button>
       {isError && <p style={{ color: 'red' }}>Xatolik yuz berdi: {errorMessage}</p>}
     </div>
   );
 };
 
 export default CreateCertificate;
-

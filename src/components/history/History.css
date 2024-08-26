@@ -1,0 +1,168 @@
+/* Barcha sahifa uchun umumiy uslub */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f1f3f5;
+    margin: 0;
+    padding: 0;
+}
+  
+/* Xatolik xabarini uslubi */
+.error-message {
+    color: #dc3545;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    font-size: 16px;
+}
+  
+/* Sahifa konteynerining uslubi */
+.page-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+  
+/* Sahifaning sarlavhasi */
+.page-header {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #343a40;
+}
+  
+/* Jadvalning uslubi */
+/* Jadval yoki konteyner uchun umumiy uslub */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Jadvalning uslubi */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 600px; /* Kichik ekranlarda scroll bo'lishi uchun minimal kenglik */
+}
+
+  
+.table th,
+.table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+  
+.table th {
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+}
+  
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+  
+.table tbody tr:hover {
+    background-color: #e2e6ea;
+    cursor: pointer;
+}
+  
+/* Delete tugmasi */
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.delete-button:hover {
+    background-color: #c82333;
+}
+  
+/* Asosiy sahifaga o'tish tugmasi */
+.go-home-button {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    width: 200px;
+} 
+
+/* Media query 420px kenglikdan kichik ekranlar uchun */
+/* Media query 420px kenglikdan kichik ekranlar uchun */
+@media (max-width: 420px) {
+    .page-container {
+        width: 100%;
+        padding: 20px;
+    }
+  
+    .page-header {
+        font-size: 24px;
+    }
+  
+    .table th,
+    .table td {
+        padding: 8px;
+        font-size: 14px;
+    }
+  
+    .delete-button,
+    .go-home-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+  
+    .table {
+        min-width: 400px; /* Kichik ekranlar uchun jadval kengligini belgilash */
+    }
+}
+
+/* Media query 720px kenglikdan kichik ekranlar uchun */
+@media (max-width: 720px) {
+    .page-container {
+        width: 95%;
+        padding: 25px;
+    }
+  
+    .page-header {
+        font-size: 26px;
+    }
+  
+    .table th,
+    .table td {
+        padding: 10px;
+        font-size: 15px;
+    }
+  
+    .delete-button,
+    .go-home-button {
+        padding: 9px 18px;
+        font-size: 15px;
+    }
+
+    .table-container {
+        overflow-x: auto;
+    }
+  
+    .table {
+        min-width: 600px; /* O'rta ekranlar uchun jadval kengligini belgilash */
+    }
+}
+

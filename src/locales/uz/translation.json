@@ -1,0 +1,56 @@
+{
+    "login": {
+      "login": "Kirish",
+      "usernamePlaceholder": "Foydalanuvchi nomi",
+      "passwordPlaceholder": "Parol",
+      "usernameRequired": "Iltimos, foydalanuvchi nomini kiriting!",
+      "passwordRequired": "Iltimos, parolni kiriting!",
+      "loginError": "Kirish xatosi: {{error}}",
+      "register": "Ro'yxatdan o'tish",
+      "goBack": "Orqaga qaytish"
+    },
+    "register": {
+      "register": "Ro'yxatdan o'tish",
+      "usernamePlaceholder": "Foydalanuvchi nomi",
+      "passwordPlaceholder": "Parol",
+      "confirmPasswordPlaceholder": "Parolni tasdiqlang",
+      "registerSuccess": "Ro'yxatdan o'tish muvaffaqiyatli amalga oshirildi!",
+      "registerError": "Ro'yxatdan o'tishda xato: {{error}}",
+      "goBack": "Orqaga qaytish"
+    },
+    "createCertificate": {
+      "certificateTitle": "Sertifikat",
+      "name": "Ism",
+      "inCenter": "markazda",
+      "courseCompleted": "kursi tamomlandi",
+      "certificateAwarded": "Ushbu sertifikat bilan taqdirlanadi",
+      "id": "ID",
+      "date": "Sana",
+      "sign": "Imzo",
+      "loading": "Yuklanmoqda...",
+      "printButton": "Sertifikatni chop etish",
+      "errorFetching": "Ma'lumotlarni olishda xatolik.",
+      "errorSending": "PDF yuborishda xatolik."
+    },
+    "paginationGetUser": {
+      "viewHistory": "Tarixni ko'rish",
+      "deleteSuccess": "Muvaffaqiyatli o'chirildi!",
+      "deleteError": "Ma'lumotlarni o'chirishda xatolik.",
+      "loading": "Yuklanmoqda...",
+      "confirmDelete": "Ushbu yozuvni o'chirishga aminmisiz?"
+    },
+    "design": {
+      "viewDesign": "Sertifikat dizaynini ko'rish",
+      "backButton": "Orqaga qaytish"
+    },
+    "home": {
+      "welcomeMessage": "CERTIFICATE yaratish loyihasiga xush kelibsiz!",
+      "startButton": "Boshlash",
+      "additionalInfo": "Qo'shimcha Ma'lumot",
+      "history": "Tarixni ko'rish",
+      "design": "Sertifikat dizaynini ko'rish",
+      "goHome": "Bosh sahifaga qaytish",
+      "certificateHistory": "Sertifikat Tarixi"
+    }
+  }
+  

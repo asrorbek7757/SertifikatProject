@@ -90,3 +90,8 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #40a9ff;
 }
+@media screen and (max-width: 420px) {
+    .linklar{
+        text-align: center;
+    }
+}

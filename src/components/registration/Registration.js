@@ -41,14 +41,14 @@ const SignUp = () => {
     
     return (
         <div className="backdrop-ucun">
-            <div className="container">
-                <h1>Ro'yxatdan o'tish</h1>
+
                 <Form
                     className="basic"
                     onFinish={onFinish}
                     onFinishFailed={(errorInfo) => console.log('Xato:', errorInfo)}
-                >
+                    >
                     <div className="inp2">
+                    <h1>Ro'yxatdan o'tish</h1>
                         <Form.Item
                             name="fname"
                             rules={[{ required: true, message: "Ismni kiriting!" }]}
@@ -96,7 +96,7 @@ const SignUp = () => {
                 </div>
                 </Form>
             </div>
-        </div>
+
     );
 };
 

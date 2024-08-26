@@ -1,0 +1,8 @@
+.language-switcher {
+    display: flex;
+  }
+  
+  .language-switcher .ant-menu-item {
+    cursor: pointer;
+  }
+  

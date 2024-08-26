@@ -49,15 +49,16 @@
 }
 
 .mathematics-design {
-  background: url('../../assets/hjk.jpg') no-repeat center/cover;
+  background: url('../../assets/svgs.jpg') no-repeat center/cover;
+
 }
 
-.it-design {
-  background: url('../../assets/2d.jpg') no-repeat center/cover;
+.phyisc-design {
+  background: url('../../assets/d3.jpg') no-repeat center/cover;
 }
 
 .chemistry-design {
-  background: url('../../assets/svf.jpg') no-repeat center/cover;
+  background: url('../../assets/chiroyli.jpg') no-repeat center/cover;
 }
 
 .biology-design {
@@ -67,15 +68,4 @@
 .english-design {
   background: url('../../assets/err.jpg') no-repeat center/cover;
 }
-@media screen and (max-width: 520px) {
-.chemistry-design{
-width: 100%;
-}
-  
-}
-@media screen and (max-width: 420px) {
-.chemistry-design{
-height: 400px;
-}
-  
-}
+

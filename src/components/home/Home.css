@@ -81,10 +81,13 @@
   50% { transform: rotate(15deg); }
 }
 .user-menu{
-display: flex;
-gap: 2px;
-}
+display: grid;
+grid-template-columns: repeat(1, 1fr);
 
+}
+.ahref{
+color: #000;
+}
 /* Logo style */
 .logo {
   color: black;
@@ -121,7 +124,7 @@ gap: 2px;
 .hero-description {
   font-size: 1.5em;
   margin-top: 100px;
-  color: #000;
+  color:dodgerblue;
   width: 90%;
 }
 

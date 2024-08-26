@@ -1,0 +1,57 @@
+{
+    "login": {
+      "login": "Login",
+      "usernamePlaceholder": "Username",
+      "passwordPlaceholder": "Password",
+      "usernameRequired": "Please enter your username!",
+      "passwordRequired": "Please enter your password!",
+      "loginError": "Login error: {{error}}",
+      "register": "Register",
+      "goBack": "Go Back"
+    },
+    "register": {
+      "register": "Register",
+      "usernamePlaceholder": "Username",
+      "passwordPlaceholder": "Password",
+      "confirmPasswordPlaceholder": "Confirm Password",
+      "registerSuccess": "Registration successful!",
+      "registerError": "Registration error: {{error}}",
+      "goBack": "Go Back"
+    },
+    "createCertificate": {
+      "certificateTitle": "Certificate",
+      "name": "Name",
+      "inCenter": "in center",
+      "courseCompleted": "course completed",
+      "certificateAwarded": "Certificate Awarded",
+      "id": "ID",
+      "date": "Date",
+      "sign": "Signature",
+      "loading": "Loading...",
+      "printButton": "Print Certificate",
+      "errorFetching": "Error fetching data.",
+      "errorSending": "Error sending PDF."
+    },
+    "paginationGetUser": {
+      "viewHistory": "View History",
+      "deleteSuccess": "Successfully deleted!",
+      "deleteError": "Error deleting data.",
+      "loading": "Loading...",
+      "confirmDelete": "Are you sure you want to delete this record?"
+    },
+    "design": {
+      "viewDesign": "View Certificate Design",
+      "backButton": "Go Back"
+    },
+    "home": {
+      "welcomeMessage": "Welcome to the CERTIFICATE creation project!",
+      "startButton": "Start",
+      "additionalInfo": "Additional Information",
+      "history": "View History",
+      "design": "View Certificate Design",
+      "goHome": "Go Home",
+      "certificateHistory": "Certificate History"
+    }
+ 
+  }
+  

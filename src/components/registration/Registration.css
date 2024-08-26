@@ -17,7 +17,8 @@
     align-items: center;
     justify-content: center;
     background: url('https://img.freepik.com/free-photo/flat-lay-desktop-concept-with-copy-space_23-2148226868.jpg') no-repeat center/cover;
-    padding: 20px;
+
+    width: 100%;
     animation: slideDown 0.8s ease-out; /* Animatsiya qo'shildi */
 }
 
@@ -57,7 +58,7 @@ h1 {
 }
 
 .inp {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
     animation: slideDown 1.6s ease-out; /* Animatsiya qo'shildi */
 }
 
@@ -91,17 +92,23 @@ h1 {
 
 .linklar {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
     animation: slideDown 2s ease-out; /* Animatsiya qo'shildi */
 }
 
 .linklar a {
     color: red;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .linklar a:hover {
     text-decoration: underline;
-    color: green;
+    color: rgba(240, 17, 9, 0.812);
+}
+@media screen and (max-width: 420px) {
+  .inp{
+    padding: 2px;
+  }
+
 }

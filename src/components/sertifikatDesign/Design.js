@@ -1,6 +1,6 @@
 import React from 'react'
 import "./Design.css"
-import rasm from '../../assets/2d.jpg'
+import rasm from '../../assets/svgs.jpg'
 import img from '../../assets/svf.jpg'
 import picter from '../../assets/err.jpg'
 import poster from '../../assets/de.jpg'

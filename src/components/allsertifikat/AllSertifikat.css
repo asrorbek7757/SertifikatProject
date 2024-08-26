@@ -1,73 +1,77 @@
 .box {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  padding: 5px;
-  position: relative;
-  background: url('../../assets/we3.png') no-repeat center center; /* Rasmni markazlashtirish */
-  background-size: contain; /* Rasmni kesmasdan saqlash */
-  text-align: center;
-  color: #0a0000;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: auto;
+  width: 100%; 
+  max-width: 100%; 
+  border-radius: 2px; 
+  padding: 5px; 
+  position: relative; 
+  background-size: contain; 
+  text-align: center; 
+  color: #0a0000; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  margin: auto; 
   object-fit: cover;
 }
 
-.box h1 {
-  font-size: 28px;
-  margin-top: 50px;
-  font-weight: bold;
-  padding-left: 20px;
-}
-
 .bola {
-  margin-top: 50px;
-  padding: 20px;
+  margin-top: 30px; 
 }
 
 .box h3 {
-  font-size: 20px;
-  margin: 10px 0;
+  font-size: 18px; /* Matn o'lchamini kattalashtirdik */
+  margin: 8px 0;
+  line-height: 1.5; /* Matnning o'qilishi uchun yaxshi interval */
 }
 
 .box p {
-  font-size: 16px;
+  font-size: 14px; /* Matn o'lchamini kattalashtirdik */
+  margin: 5px 0;
+  padding: 13px; /* Padding qo'shdik */
 }
 
 .signature {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  border-top: 1px solid #fff;
-  width: 300px;
+  position: absolute; 
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  border-top: 1px solid #fff; 
+  width: 300px; 
   text-align: center;
 }
 
-.qrcode {
+
+.qrcode{
   position: absolute;
-  top: 310px;
-  right: 120px;
+  right: 200px;
+  top: 280px;
+}
+.shuncakiImzo{
+  padding-top: 20px;
+}
+.logitiv {
+  padding-top: 40px;
+  font-size: 25px; /* "CERTIFICATE" matni uchun kattalashtirish */
+}
+.imzo{
+  margin-top: 20px;
 }
 
 button {
-  background-color: DodgerBlue;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  display: block;
+  background-color: DodgerBlue; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  padding: 10px 20px; 
+  font-size: 14px; 
+  cursor: pointer; 
+  margin-top: 20px; 
+  display: block; 
   margin: auto;
 }
 
 button:disabled {
-  background-color: grey;
+  background-color: grey; 
   cursor: not-allowed;
 }
 
@@ -78,15 +82,15 @@ button:hover:not(:disabled) {
 /* 720px va kichik ekranlar uchun */
 @media screen and (max-width: 720px) {
   .box {
-    height: 400px; /* Balandlikni kichraytirish */
+    height: 400px; 
   }
-
+  
   .box h1,
   .box h3,
   .box p {
-    font-size: 16px;
+    font-size: 16px; 
   }
-
+  
   .qrcode {
     top: 200px;
     right: 60px;
@@ -102,24 +106,25 @@ button:hover:not(:disabled) {
 /* 420px va kichik ekranlar uchun */
 @media screen and (max-width: 420px) {
   .box {
-    height: 400px; /* Balandlikni saqlash */
+    height: 300px;
+    background-size: contain; 
   }
-
+  
   .box h1,
   .box h3,
   .box p {
-    font-size: 12px;
+    font-size: 8px;
+    padding: .020px;
   }
-
+  
   .qrcode {
-    top: 230px;
-    right: 40px;
+    top: 150px;
+    right: 60px;
     width: 15px;
     height: 30px;
-    font-size: 14px;
   }
-}
-
-.logotiv {
-  letter-spacing: 10px;
+  
+  .imzo {
+    font-size: 12px; /* Imzo matni o'lchamini moslashtirish */
+  }
 }
