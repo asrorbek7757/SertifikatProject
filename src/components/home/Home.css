@@ -2,7 +2,7 @@
 .image {
   background: url('https://memberclicks.com/wp-content/uploads/2021/12/membership-certificate-1-scaled.jpg') no-repeat center/cover;
   width: 100%;
-  min-height: 100vh;
+  min-height: 99.9vh;
 
   background-attachment: fixed; /* This keeps the background fixed when scrolling */
 }
@@ -124,7 +124,7 @@ color: #000;
 .hero-description {
   font-size: 1.5em;
   margin-top: 100px;
-  color:dodgerblue;
+  color:rgb(9, 44, 79);
   width: 90%;
 }
 
@@ -361,4 +361,3 @@ color: #000;
   }
 }
 
-  

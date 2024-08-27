@@ -53,8 +53,8 @@ const SignUp = () => {
                 onFinish={onFinish}
                 onFinishFailed={(errorInfo) => console.log('Xato:', errorInfo)}
                 >
-                <h1>Certificate yaratish</h1>
                 <div className="inp2">
+                <h1>Certificate yaratish</h1>   
                     <Form.Item
                         name="fname"
                         rules={[{ required: true, message: "Ismni kiriting!" }]}

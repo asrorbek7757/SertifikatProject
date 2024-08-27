@@ -36,9 +36,9 @@
     animation: slideDown 1s ease-out; /* Animatsiya qo'shildi */
 }
 
-h1 {
+ .inp2 h1 {
     text-align: center;
-    color: #333;
+    color: #767373;
     margin-bottom: 10px;
     animation: slideDown 1.2s ease-out; /* Animatsiya qo'shildi */
 }

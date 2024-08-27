@@ -105,7 +105,12 @@ const CreateCertificate = ({ selectedSubject }) => {
             <h3>sana: {formatDate(data.date)}</h3>
             <p className='shuncakiImzo'>imzo:_______________________</p>
 
-            <QRCode value={`https://sertifikat-project.vercel.app/sertifikat/${data.userId}`} size={50} className="qrcode" />
+            <QRCode 
+  value={`https://sertifikat-project.vercel.app`} 
+  size={50} 
+  className="qrcode" 
+/>
+
           </div>
         ) : (
           <p style={{color:"black"}}>Ma'lumotlar yuklanmoqda...</p>

@@ -34,10 +34,10 @@
     overflow: hidden; /* Prevent overflow during animation */
 }
 
-h1 {
+.inp2 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #767376;
     animation: slideDown 1s ease-out; /* Animatsiya qo'shildi */
 }
 
@@ -97,15 +97,12 @@ h1 {
 }
 
 .linklar a {
-    color: red;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 14px;
 }
 
-.linklar a:hover {
-    text-decoration: underline;
-    color: rgba(240, 17, 9, 0.812);
-}
+
 @media screen and (max-width: 420px) {
   .inp{
     padding: 2px;

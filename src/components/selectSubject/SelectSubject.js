@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import './SelectSubject.css'
 const subjects = [
   'Matematika',
-  'IT',
+  'Fizika',
   'Kimyo',
   'Biologiya',
   'Ingliz tili'

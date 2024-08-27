@@ -35,7 +35,23 @@ function Home() {
         break;
     }
   };
+  useEffect(() => {
+    const createLeaf = () => {
+      const leaf = document.createElement('div');
+      leaf.classList.add('leaf');
+      leaf.style.left = `${Math.random() * 100}vw`;
+      leaf.style.animationDelay = `${Math.random() * 5}s`;
+      document.querySelector('.fall-leaves').appendChild(leaf);
 
+      setTimeout(() => {
+        leaf.remove();
+      }, 5000); // 5 sekunddan keyin bargni o‘chirish
+    };
+
+    const interval = setInterval(createLeaf, 500); // Har 0.5 sekundda yangi bargni yaratish
+
+    return () => clearInterval(interval); // Component o'chirilganda intervalni to'xtatish
+  }, []);
   const userMenu = (
     <Menu onClick={handleMenuClick}>
       <Menu.Item key="register" icon={<UserOutlined />}>
@@ -76,6 +92,7 @@ function Home() {
     <div className="image">
       <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="logo">CERTIFICATE</div>
+      <div className="fall-leaves"></div>
         <ul className="nav-links">
           {/* Qo'shimcha navigatsiya tugmalarini qo'shishingiz mumkin */}
         </ul>
