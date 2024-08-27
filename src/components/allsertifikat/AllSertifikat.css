@@ -34,7 +34,6 @@
   position: absolute; 
   bottom: 10px; 
   left: 50%; 
-  transform: translateX(-50%); 
   border-top: 1px solid #fff; 
   width: 300px; 
   text-align: center;
@@ -106,19 +105,18 @@ button:hover:not(:disabled) {
 /* 420px va kichik ekranlar uchun */
 @media screen and (max-width: 420px) {
   .box {
-    height: 300px;
-    background-size: contain; 
+    height: 300px; 
   }
   
   .box h1,
   .box h3,
   .box p {
-    font-size: 8px;
+    font-size: 12px;
     padding: .020px;
   }
   
   .qrcode {
-    top: 150px;
+    top: 190px;
     right: 60px;
     width: 15px;
     height: 30px;

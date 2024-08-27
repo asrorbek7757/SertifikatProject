@@ -4,7 +4,7 @@ import rasm from '../../assets/svgs.jpg'
 import img from '../../assets/svf.jpg'
 import picter from '../../assets/err.jpg'
 import poster from '../../assets/de.jpg'
-import png from '../../assets/hjk.jpg'
+import png from '../../assets/salom.jpg'
 import svg from '../../assets/deda.jpg'
 function Design() {
   return (
