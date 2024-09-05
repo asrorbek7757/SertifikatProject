@@ -22,7 +22,7 @@ const SignUp = () => {
             console.log(form);
     
             // API so'rovini yuborish
-            const response = await axios.post('http://localhost:5000/user/createUser', form, {
+            const response = await axios.post('https://certificate1-397i.vercel.app/user/createUser', form, {
                 headers: {
                     'Content-Type': 'application/json'
                 }

@@ -77,24 +77,3 @@
   background: url('../../assets/salom.jpg') no-repeat center/cover;
 }
 
-/* Responsive Design */
-@media (max-width: 720px) {
-  .subjects button {
-    width: 140px;
-    padding: 12px;
-    font-size: 18px;
-  }
-}
-
-@media (max-width: 420px) {
-  .subjects {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  .subjects button {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-  }
-}

@@ -16,7 +16,7 @@ const PaginationGetUser = () => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/sertifikat/getSertificat');
+      const response = await axios.get('https://certificate1-397i.vercel.app/sertifikat/getSertificat');
       const items = response.data.innerData;
       setUsers(items);
     } catch (error) {
@@ -28,7 +28,7 @@ const PaginationGetUser = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/sertifikat/deleteSertifikat/${id}`);
+      await axios.delete(`https://certificate1-397i.vercel.app/sertifikat/deleteSertifikat/${id}`);
       fetchData(); // O'chirilgandan so'ng yangilanish
     } catch (error) {
       console.error('Error deleting data:', error);

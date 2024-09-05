@@ -12,7 +12,7 @@ const Login = () => {
 
     const onFinish = async (values) => {
         try {
-            const response = await axios.post('http://localhost:5000/user/Login', values);
+            const response = await axios.post('https://certificate1-397i.vercel.app/user/Login', values);
             if (response.status === 200) {
                 localStorage.setItem('token', response.data.token);
                 console.log("User type:", response.data.userType);
