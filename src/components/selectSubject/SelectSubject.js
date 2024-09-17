@@ -22,6 +22,7 @@ const SelectSubject = ({ setSelectedSubject }) => {
       <h2>Fanni tanlang</h2>
       <div className="subjects">
       <br />
+      <br />
         {subjects.map((subject) => (
           <button key={subject} onClick={() => handleSelect(subject)}>
             {subject}

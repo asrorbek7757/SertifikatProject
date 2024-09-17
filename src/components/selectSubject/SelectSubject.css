@@ -19,22 +19,11 @@
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/certificate.jpg') no-repeat center/cover;
   color: white;
   animation: slideDown 0.8s ease-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  
 }
 
-.subjects {
-  display: flex;
-  -ms-flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-top: 30px;
-  animation: slideDown 1s ease-out;
-  margin: 20px;
-  padding: 25px;
+.subjects{
+margin-left: 655px;
 }
 
 .subjects button {
@@ -48,6 +37,10 @@
   transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   animation: slideDown 1.2s ease-out;
+  display: block;
+  margin: 10px;
+  
+
 }
 
 .subjects button:hover {
@@ -77,3 +70,9 @@
   background: url('../../assets/salom.jpg') no-repeat center/cover;
 }
 
+@media screen and (max-width:420px) {
+.subjects{
+  
+  margin-left: 90px;
+}
+}

@@ -2,11 +2,10 @@ import React, { useRef, useState, useEffect } from 'react';
 import html2canvas from 'html2canvas';
 import { jsPDF } from 'jspdf';
 import axios from '../../api/index';
-import ReactToPrint from 'react-to-print';
 import QRCode from 'qrcode.react';
 import './AllSertifikat.css';
 
-const CreateCertificate = ({ selectedSubject }) => {
+const AllSertifikat = ({ selectedSubject }) => {
   const componentRef = useRef(null);
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +18,7 @@ const CreateCertificate = ({ selectedSubject }) => {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/sertifikat/getSertificat');
+      const response = await axios.get('https://certificate1-397i.vercel.app/sertifikat/getSertificat');
       const items = response.data.innerData.reverse();
       setData(items[0]);
     } catch (error) {
@@ -106,26 +105,23 @@ const CreateCertificate = ({ selectedSubject }) => {
             <p className='shuncakiImzo'>imzo:_______________________</p>
 
             <QRCode 
-  value={`https://sertifikat-project.vercel.app`} 
-  size={50} 
-  className="qrcode" 
-/>
-
+              value={`https://sertifikat-project.vercel.app`} 
+              size={50} 
+              className="qrcode" 
+            />
           </div>
         ) : (
           <p style={{color:"black"}}>Ma'lumotlar yuklanmoqda...</p>
         )}
       </div>
       <br />
-      <ReactToPrint
-        trigger={() => <button disabled={isLoading}>{isLoading ? 'Yuklanmoqda...' : 'Sertifikatni yuklab yuborish'}</button>}
-        content={() => componentRef.current}
-        onAfterPrint={handlePrint}
-      />
+      <button onClick={handlePrint} disabled={isLoading}>
+        {isLoading ? 'Yuklanmoqda...' : 'Sertifikatni yuklab yuborish'}
+      </button>
       <br />
       {isError && <p style={{ color: 'red' }}>Xatolik yuz berdi: {errorMessage}</p>}
     </div>
   );
 };
 
-export default CreateCertificate;
+export default AllSertifikat;

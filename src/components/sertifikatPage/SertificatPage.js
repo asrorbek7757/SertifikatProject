@@ -1,76 +1,62 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from '../../api/index';
-import QRCode from 'qrcode.react';
-import './SertificatPage.css';
-import selectedSubject from '../selectSubject/SelectSubject'
+import { useParams } from 'react-router-dom';
 
-const Print = () => {
-    const componentRef = useRef(null);
-    const [data, setData] = useState(null);
+const CertificateDetails = () => {
+  const { userId } = useParams();
+  const [data, setData] = useState(null);
+  const [isError, setIsError] = useState(false);
 
-    useEffect(() => {
-        fetchData();
-    }, []);
-
+  useEffect(() => {
     const fetchData = async () => {
-        try {
-            const response = await axios.get('http://localhost:5000/sertifikat/getSertificat');
-            const items = response.data.innerData;
-
-            console.log(response.data.innerData);
-            if (Array.isArray(items) && items.length) {
-                // Ma'lumotlarni sanaga ko'ra tartiblaymiz va eng so'nggisini tanlaymiz
-                const sortedItems = items.sort((a, b) => new Date(b.date) - new Date(a.date));
-                setData(sortedItems[0]);
-            } else {
-                console.error('Fetched data is not an array or is empty:', items);
-            }
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
+      try {
+        const response = await axios.get(`https://certificate1-397i.vercel.app/sertifikat/getSertificat/${userId}`);
+        setData(response.data);
+      } catch (error) {
+        setIsError(true);
+      }
     };
-    const getCertificateDesign = () => {
-        switch (selectedSubject) {
-          case 'Matematika':
-            return 'mathematics-design'; // Matematika uchun dizayn
-          case 'IT':
-            return 'physics-design'; // Fizika uchun dizayn
-          case 'Kimyo':
-            return 'chemistry-design'; // Kimyo uchun dizayn
-          case 'Biologiya':
-            return 'biology-design'; // Biologiya uchun dizayn
-          case 'Ingliz tili':
-            return 'english-design'; // Ingliz tili uchun dizayn
-          default:
-            return 'default-design';
-        }
-      };
+    fetchData();
+  }, [userId]);
 
-    const formatDate = (dateString) => {
-        const options = { year: 'numeric', month: 'long', day: 'numeric' };
-        return new Date(dateString).toLocaleDateString('uz-UZ', options);
-    };
-
-    return (
-        <div>
-            <div className={`box ${getCertificateDesign()}`} ref={componentRef}>
-                {data && (
-                    <div className="bola">
-                        <h1>C E R T I F I C A T E</h1>
-                        <h3>{data.fname} {data.lname}</h3>
-                        <h3>{data.markazNomi}da</h3>
-                        <h3>{data.fanNomi} kursini</h3>
-                        <h3>muvaffaqiyatli tamomlagani uchun</h3>
-                        <h3>Ushbu sertifikat bilan taqdirlanadi</h3>
-                        <p>ID: {data.userId}</p>
-                        <h3>sana: {formatDate(data.date)}</h3>
-                        <h3>_______________________</h3>
-                        <QRCode value={`https://certificate-1.vercel.app/SertifikatPage`} size={70} className="qrcode" />
-                    </div>
-                )}
-            </div>
-        </div>
-    );
+  return (
+    <div>
+      {isError ? (
+        <p>Xatolik yuz berdi.</p>
+      ) : data ? (
+        <table>
+          <tbody>
+            <tr>
+              <td>Ism:</td>
+              <td>{data.fname}</td>
+            </tr>
+            <tr>
+              <td>Familiya:</td>
+              <td>{data.lname}</td>
+            </tr>
+            <tr>
+              <td>O'quv markazi:</td>
+              <td>{data.markazNomi}</td>
+            </tr>
+            <tr>
+              <td>Fan:</td>
+              <td>{data.fanNomi}</td>
+            </tr>
+            <tr>
+              <td>Sana:</td>
+              <td>{new Date(data.date).toLocaleDateString()}</td>
+            </tr>
+            <tr>
+              <td>ID:</td>
+              <td>{data.userId}</td>
+            </tr>
+          </tbody>
+        </table>
+      ) : (
+        <p>Ma'lumot yuklanmoqda...</p>
+      )}
+    </div>
+  );
 };
 
-export default Print;
+export default CertificateDetails;
